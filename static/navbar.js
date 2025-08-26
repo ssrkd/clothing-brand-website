@@ -1,4 +1,4 @@
-// scrlloing down hides navbar, scrolling up shows navbar
+j// scrlloing down hides navbar, scrolling up shows navbar
 let navbar = document.getElementsByTagName("header");
 let navbarHeight = navbar[0].offsetHeight;
 let prevScrollpos = window.pageYOffset;
