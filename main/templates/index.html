@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- =============== TITLE =============== -->
-    <title>{% block title %} FRANCHISE BRAND {% endblock%}</title>
+    <title>{% block title %} qaraa ONLINE SHOP {% endblock%}</title>
     <!-- =============== X-ICON =============== -->
-    <link rel="icon" type="image/x-icon" href="static/images/logo_white.svg">
+    <link rel="icon" type="image/x-icon" href="static/images/qaraa.svg">
     <!-- =============== ICONS =============== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- =============== CSS =============== -->
@@ -24,7 +24,7 @@
         {% block preloader %}
         <div class="preloader" id="preloader">
             <div class="preloader-content">
-                <img src="static/images/logo.svg" alt="preloader_logo">
+                <img src="static/images/qara.png" alt="preloader_logo">
             </div>
         </div>
         {% endblock %}
@@ -36,7 +36,7 @@
                     <i class="bx bx-menu bx-tada-hover"></i>
                 </div>
                 <div class="logo">
-                    <a href="{{url_for('views.home_page')}}"><img src="static/images/logo.svg" alt="Logo" class="logo"></a>
+                    <a href="{{url_for('views.home_page')}}"><img src="static/images/qaraa.png" alt="Logo" class="logo"></a>
                 </div>
                 <nav>
                     <ul class="ul" id="ul">
@@ -47,7 +47,7 @@
                 </nav>  
             </div>
             <div class="logo_2">
-                <a href="{{url_for('views.home_page')}}"><img src="static/images/logo.svg" alt="Logo" class="logo_2"></a>
+                <a href="{{url_for('views.home_page')}}"><img src="static/images/qaraa.png" alt="Logo" class="logo_2"></a>
             </div>
             <div class="right-section">
                 <div class="cart-icon">
@@ -89,28 +89,30 @@
         <main>
 
             <section class="hero">
-                <div class="welcome-message">FRANCHISE<br>BRAND
-                    <div class="welcome-message-inside">THAT IS FRANCHISE THAT IS FRANCHISE</div>
-                    <img src="static/images/logo.svg" alt="" class="welcome-logo">
+                <div class="welcome-message" style="color:black;">
+                    qaraa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>shop
+                    <div class="welcome-message-inside" style="color:rgb(81, 0, 0); font-weight:1600; margin-top:30px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;online
+                    </div>
+                    <img src="static/images/qaraa.png" alt="" class="welcome-logo">
                 </div>
             </section>
 
             <section class="new-drop">
                 <div class="marquee">
-                    <p class="marquee-item">NEW DROP</p>
-                    <p class="marquee-item">NEW DROP</p>
-                    <p class="marquee-item">NEW DROP</p>
-                    <p class="marquee-item">NEW DROP</p>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
+                    <p class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</p> 
+                    <p class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</p>
+                    <p class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</p>
+                    <p class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</p>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
                 </div>
                 
                 <div class="new">
-                    
                     <div class="new-grid">
                         {% for new_drop in new_drop %}
                         <a href="{{ url_for('views.product_page_2', new_drop_url=new_drop.url) }}">
@@ -120,28 +122,27 @@
                     </div>
                     
                     {% for new_drop in new_drop %}
-                    <div class="new-text-one">{{ new_drop.text }}</div>
-                    <div class="new-text-two">{{ new_drop.text }}</div>
-                    <div class="new-text-three">{{ new_drop.text }}</div>
-                    <div class="new-text-four">{{ new_drop.text }}</div>
-                    <div class="new-text-five">{{ new_drop.text }}</div>
-                    <div class="new-text-six">{{ new_drop.text }}</div>
-                    <div class="new-img">
-                    </div>
+                    <div class="new-text-one" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-text-two" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-text-three" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-text-four" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-text-five" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-text-six" style="color:black;">{{ new_drop.text }}</div>
+                    <div class="new-img"></div>
                     {% endfor %}     
                 </div>
                 
                 <div class="marquee">
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
-                    <div class="marquee-item">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
+                    <div class="marquee-item" style="color:rgb(173, 0, 26);">NEW DROP</div>
                 </div>
             </section>
 
@@ -183,7 +184,7 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <h3 class="logo-text">FRANCHISE BRAND</h3>
+                <h3 class="logo-text">qaraa kz</h3>
                 <div class="addition">
                     <a href="{{url_for('views.dostavka')}}" target="_blank">Доставка</a>
                     <a href="{{url_for('views.vozvrat')}}" target="_blank">Условия возврата товара</a>
@@ -191,13 +192,13 @@
                 </div>
                 <ul class="socials">
                     <li><a href="https://www.instagram.com/thatisfranchise/" target="_blank"><i class="bx bxl-instagram-alt bx-tada" id="social-network-icon"></i></a></li>
-                    <li><a href="https://vk.com/thatisfranchise" target="_blank"><i class='bx bxl-vk bx-tada'></i></a></li>
+                    <li><a href="https://vk.com/thatisfranchise" target="_blank"><i class='bx bxl-tiktok bx-tada'></i></a></li>
                     <li><a href="https://t.me/thatisfranchise" target="_blank"><i class="bx bxl-telegram bx-tada" id="social-network-icon"></i></a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
-                <p>Copyright &copy;2023 FRANCHISE BRAND.</p>
-                <p>Created by <span>Arina Leen</span>.</p>
+                <p>Copyright &copy;2025 qaraa kz.</p>
+                <p>Created by <span>secret</span>.</p>
             </div>
         </footer>
 

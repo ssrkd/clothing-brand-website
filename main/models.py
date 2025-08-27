@@ -2,13 +2,11 @@ from main import db
 from datetime import datetime
 from flask_login import UserMixin
 
-
-
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
-    role = db.Column(db.String(20), nullable=False)
+    role = db.Column(db.String(20), nullable=False, default='user')
     datetime = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
 class Product(db.Model):
@@ -23,7 +21,7 @@ class Product(db.Model):
     quantity_M = db.Column(db.Integer, nullable=True)
     quantity_L = db.Column(db.Integer, nullable=True)
     quantity_XL = db.Column(db.Integer, nullable=True)
-    inCart = db.Column(db.Integer, nullable=False, default='0')
+    inCart = db.Column(db.Integer, nullable=False, default=0)
     img = db.Column(db.String(150), nullable=False)
 
     featured_1 = db.Column(db.String(150), nullable=True)
@@ -51,7 +49,6 @@ class NewDrop(db.Model):
     url_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     url = db.relationship('Product')
 
-
 class Gallery(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     img = db.Column(db.String(150), nullable=False)
@@ -71,5 +68,3 @@ class Order(db.Model):
     telephone = db.Column(db.String(100), nullable=False)
     address = db.Column(db.String(500), nullable=False)
     delivery = db.Column(db.String(150), nullable=False)
-
-    
